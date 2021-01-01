@@ -1,0 +1,272 @@
+/*Estilos globales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*=====================================================*/
+
+
+/*Definir el tamaño y como se acomodaran dentro del div.introduccion*/
+main div.introduccion{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+}
+/*Definir tamaño que ocuparan los div con clase .perfil y .proyectos
+dentro del div padre .introduccion*/
+main div.introduccion .perfil,.proyectos{
+    width: 50%;
+}
+
+/*====================================================*/
+
+/*Acomodar los div (.foto y .texto) dentro del contenedor .perfil
+y añadir algunos estilos*/
+.perfil{
+    /* background-color: dodgerblue; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+/*Defnir el tamaño del contenedor de la imagen. No hay muchos ajustes*/
+.perfil div.foto{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/*Definir el tamaño de la etiqueta img, o sea que se ajsutara 
+la imagen, mi foto*/
+.perfil div.foto img{
+    width: 25rem;
+    height: 100%;
+    border-radius: 50% 50% 1% 1%;
+}
+
+/*Definir los estilos para el texto dentro del contenedor .perfil*/
+.perfil div.texto{
+    width: 100%;
+    text-align: center;
+}
+.perfil div.texto p{
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.755);
+}
+
+/*==================================================*/
+
+/*Ajustar los estilos para el contenedor .caja dentro de .proyectos.*/
+.proyectos div.caja{
+    background-color: rgba(128, 255, 0, 0.644);
+    border-radius: 0 0 0 20px;
+    height: 100%;
+    padding: 1rem;
+}
+/*Titulo para que se entienda de que es el contenedor*/
+.proyectos .caja p.caja_title{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.247);
+}
+/*Separar caja div .trabajo dentro de .caja. Esto para que no se vea muy junto*/
+.proyectos .caja .trabajo{
+    margin: 1rem;
+}
+/*Definir los estilos para los enlaces y texto normal*/
+.proyectos .caja .trabajo a{
+    font-size: 2rem;
+    text-decoration: none;
+    /* border: solid 1px; */
+}
+.proyectos .caja .trabajo p{
+    font-size: 1.6rem;
+    padding-left: 1.8rem;
+}
+
+/*==================================================*/
+
+section.habilidades{
+    width: 100%;
+}
+.habilidades div.lenguaje{
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+div.lenguaje .icono{
+    width: 15%;
+    height: 100%;
+    background-color: rgba(128, 255, 0, 0.644);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.lenguaje  .icono_border_radiusright{
+    border-radius: 0 20px 0 0;
+}
+div.lenguaje .icono_border_radiusbottom{
+    border-radius: 0 0 20px 0;
+}
+.icono img{
+    width: 100%;
+    height: 10rem;
+    /* height: 10rem; */
+}
+div.lenguaje .texto{
+    width: 85%;
+    font-size: 1.6rem;
+    line-height: 20px;
+    /* letter-spacing: 2px; */
+    /* word-spacing: 5px; */
+    padding: 0 3%;
+}
+
+/*=============================================*/
+
+/*Estilos para acomodar redes sociales*/
+section.socialnetwork{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 4% 0 0;
+    background-color: rgba(0, 0, 0, 0.755);
+}
+/*Enlaces*/
+.socialnetwork a{
+    text-decoration: none;
+    font-size: 3.8rem;
+    color: white;
+    font-weight: 600;
+}
+/*Cuando se ponga el cursor sobre los enlaces*/
+.socialnetwork a.twitter:hover{
+    color: rgb(0, 166, 255);
+}
+.socialnetwork a.github:hover{
+    color: rgb(161, 47, 255);
+}
+
+/*============================================*/
+
+footer{
+    font-size: 1rem;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.755);
+    text-align: center;
+    color: white;
+    padding-bottom:10px ;
+}
+
+@media (max-width:735px){
+    main div.introduccion{
+        /* width: 100%;*/
+        height: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: white;
+    }
+    main div.introduccion .perfil,.proyectos{
+        width: 100%;
+    }
+    main div.introduccion .perfil{
+        padding: 1rem 0 0;
+    }
+    .perfil div.foto img{
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50% 50% 50% 50%;
+    }
+    .perfil div.texto p{
+        font-size: 1.5rem;
+        /* padding: .5rem 1rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.755); */
+    }
+    .proyectos div.caja{
+        /* background-color: rgba(128, 255, 0, 0.644); */
+        border-radius: 0;
+        /* height: 100%;
+        padding: 1rem; */
+    }
+    .proyectos .caja .trabajo a{
+        font-size: 1.5rem;
+        /* text-decoration: none; */
+        /* border: solid 1px; */
+    }
+    .proyectos .caja .trabajo p{
+        font-size: 1.1rem;
+        padding-left: 1.8rem;
+    }
+    .habilidades div.lenguaje{
+        width: 100%;
+        background-color: white;
+        height: 20rem;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center; */
+    }
+    div.lenguaje .icono{
+        padding: 0 3px;
+        /* width: 15%;
+        height: 100%;
+        background-color: rgba(128, 255, 0, 0.644);
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    div.lenguaje  .icono_border_radiusright{
+        border-radius: 0;
+    }
+    div.lenguaje .icono_border_radiusbottom{
+        border-radius: 0;
+    }
+    div.lenguaje .texto{
+        /* width: 85%; */
+        font-size: 1.1rem;
+        line-height: 15px;
+        /* letter-spacing: 2px; */
+        /* word-spacing: 5px; */
+        padding: 0 3%;
+        text-align: justify;
+    }
+    section.socialnetwork{
+        width: 100%;
+        height: 10vh;
+        /* display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center; */
+        margin: 0;
+        /* background-color: rgba(0, 0, 0, 0.755); */
+    }
+    .socialnetwork a{
+        /* text-decoration: none; */
+        font-size: 2rem;
+        /* color: white; */
+        font-weight: 600;
+    }
+
+}
