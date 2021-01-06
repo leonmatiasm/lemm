@@ -95,16 +95,21 @@ la imagen, mi foto*/
     color: rgb(45, 172, 201);
     /* border: solid 1px; */
 }
+.proyectos .caja .trabajo a:hover{
+    /* font-size: 1.9rem; */
+    border-bottom: solid 2px;
+}
 .proyectos .caja .trabajo p{
     font-size: 1.6rem;
     padding-left: 1.8rem;
+    padding-top: .5rem;
 }
 /*==================================================*/
 
 p.inicios{
     text-align: center;
     font-size: 2rem;
-    color: black;
+    color: rgba(0, 0, 0, 0.247);
     font-weight: 600;
 }
 
@@ -221,7 +226,7 @@ footer{
         border-radius: 50% 50% 50% 50%;
     }
     .perfil div.texto p{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .proyectos div.caja{
         border-radius: 0;
@@ -232,6 +237,10 @@ footer{
     .proyectos .caja .trabajo p{
         font-size: 1.1rem;
         padding-left: 1.8rem;
+    }
+    p.inicios{
+        padding-left: 50px;
+        font-size: 1.6rem;
     }
     .habilidades div.lenguaje{
         width: 100%;
